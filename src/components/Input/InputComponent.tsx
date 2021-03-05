@@ -1,12 +1,15 @@
-import React, {FC} from 'react';
-import { IProps } from './interfaces';
+import React, { FC } from 'react';
 
-const InputComponent: FC<IProps> = () => {
-    return (
+interface IChildren {
+    children(data: {
+        [key: string]: string|number|(() => void)
+    }): React.ReactElement
+}
+
+const InputComponent: FC<IChildren> = ({ children }) => (
         <div>
-            123
+            {children({ a: 1, b: 'a' })}
         </div>
     );
-};
 
 export default InputComponent;
