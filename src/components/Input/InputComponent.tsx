@@ -1,15 +1,10 @@
 import React, { FC } from 'react';
+import { IChildren, IInputProps } from '../../interfaces';
 
-interface IChildren {
-    children(data: {
-        [key: string]: string|number|(() => void)
-    }): React.ReactElement
-}
-
-const InputComponent: FC<IChildren> = ({ children }) => (
-        <div>
-            {children({ a: 1, b: 'a' })}
-        </div>
+const InputComponent: FC<IChildren & IInputProps> = ({ children , value = "", onChange = () => {}, error= '', name = '' }) => (
+        <>
+            {children({ value, onChange, error, name })}
+        </>
     );
 
 export default InputComponent;

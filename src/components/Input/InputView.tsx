@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { IProps } from "./interfaces";
+import { IInputProps } from '../../interfaces';
 
-const InputView: FC<IProps> = ({ onChange, value }) => (
-        <input onChange={onChange} value={value}/>
+const InputView: FC<IInputProps> = ({ onChange, value, error, name }) => (
+        <input onChange={onChange} value={value} name={name}/>
     );
 
 export default InputView;
