@@ -1,6 +1,6 @@
 {
   "name": "@pluginsuite/components-ui",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "dependencies": {
     "@types/node": "^12.0.0",
@@ -25,6 +25,7 @@
       "react-app"
     ]
   },
+  "homepage": "https://github.com/ipaymushkin/components-ui",
   "browserslist": {
     "production": [
       ">0.2%",
