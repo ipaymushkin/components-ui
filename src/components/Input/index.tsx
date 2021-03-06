@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import InputView from "./InputView";
-import InputComponent from "./InputComponent";
+import InputModel from "./InputModel";
+import TextareaView from './TextareaView';
 
 interface IInput {
     name: string,
@@ -10,10 +11,17 @@ interface IInput {
 const Input: FC<IInput> = ({ name , values,  ...props }) => {
     // console.log('props', props)
     console.log('values', values, name)
-     return <InputComponent name={name} value={values && values[name]}>
+     return <InputModel name={name} value={values && values[name]}>
         {(childProps) => <InputView name={name} {...childProps} {...props} />}
-    </InputComponent>
-}
-;
+    </InputModel>
+};
 
-export default Input;
+const Textarea: FC<IInput> = ({ name , values,  ...props }) => {
+    // console.log('props', props)
+    console.log('values', values, name)
+    return <InputModel name={name} value={values && values[name]}>
+        {(childProps) => <TextareaView name={name} {...childProps} {...props} />}
+    </InputModel>
+};
+
+export { Input, Textarea };

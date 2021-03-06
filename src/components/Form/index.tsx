@@ -26,7 +26,8 @@ const Form: FC<IFormChildren> = ({ children, onSubmit, onChange, values }) => {
 
     return (
         <form onSubmit={(e) => submitHandler(e)}>
-            form
+            <div>form</div>
+            <div>{JSON.stringify(values)}</div>
             {React.Children.map(children, child => React.cloneElement(child, { onChange: formChangeHandler, values }))}
         </form>
     )

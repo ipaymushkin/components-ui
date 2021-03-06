@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Input from "./components/Input";
+import { Input, Textarea } from "./components/Input";
 import Form from "./components/Form";
 import { useForm } from './hooks/useForm';
 import InputView from "./components/Input/InputView";
@@ -32,6 +32,7 @@ const App = () => {
             <Form onChange={handleChange} onSubmit={() => onSubmit(handleSubmit)} values={values}>
                 <Input name="name" />
                 <Input name="age" />
+                <Textarea name="comment" />
                 <button type="submit">submit</button>
             </Form>
 
