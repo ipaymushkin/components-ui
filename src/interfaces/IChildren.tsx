@@ -2,6 +2,6 @@ import React from "react";
 
 export interface IChildren {
     children(data: {
-        [key: string]: string|number|((e: React.FormEvent<HTMLInputElement>) => void)
+        [key: string]: string|number|((e: string) => void)
     }): React.ReactNode,
 }
