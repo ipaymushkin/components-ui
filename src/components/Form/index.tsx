@@ -12,7 +12,6 @@ const Form: FC<IFormChildren> = ({ children, onSubmit, onChange, values }) => {
     const [formData, setFormData] = useState({})
 
     const formChangeHandler = (data: {}) => {
-        console.log('data', data)
         setFormData(state => ({ ...state, ...data }))
         onChange(formData)
     }
@@ -21,8 +20,6 @@ const Form: FC<IFormChildren> = ({ children, onSubmit, onChange, values }) => {
         e.preventDefault()
         onSubmit()
     }
-
-    console.log('form back values', values)
 
     return (
         <form onSubmit={(e) => submitHandler(e)}>

@@ -4,4 +4,6 @@ export interface IInputProps {
     value?: string,
     error?: string,
     name: string,
+    label?: string,
+    type?: string,
 }

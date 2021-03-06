@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { Input, Textarea } from "./components/Input";
 import Form from "./components/Form";
 import { useForm } from './hooks/useForm';
-import InputView from "./components/Input/InputView";
+import InputView from "./components/Input/view/InputView";
 
 const App = () => {
 
     const [errors, onChange, onSubmit, values ] = useForm()
 
     const [localValue, setLocalValue] = useState({ name: '', value: '' })
-    console.log('localValue', localValue)
 
     const localChange = ({ name, value }) => {
         setLocalValue({
@@ -17,22 +16,20 @@ const App = () => {
         })
     }
 
-    const handleSubmit = ({ name, value }) => {
-        console.log('submit')
-        return { name, value }
+    const handleSubmit = (data) => {
+        console.log('submit', data)
     }
 
     const handleChange = ({ name, value }) => {
-        console.log('onchange', { name, value })
         onChange({ name, value })
     }
 
     return (
         <div>
             <Form onChange={handleChange} onSubmit={() => onSubmit(handleSubmit)} values={values}>
-                <Input name="name" />
-                <Input name="age" />
-                <Textarea name="comment" />
+                <Input name="name" label="Name" />
+                <Input name="age" label="Age" type="number" />
+                <Textarea name="comment" label="Comment" />
                 <button type="submit">submit</button>
             </Form>
 

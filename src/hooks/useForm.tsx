@@ -10,7 +10,8 @@ export const useForm = (): [errors: {}, onChange: (formData: {}) => void, onSubm
 
     const onSubmit = (fn: (values: {}) => void) => {
         console.log('submit values', values)
-        // fn(values)
+        setValues({})
+        fn(values)
     }
 
     const onChange = ({ name, value }) => {
