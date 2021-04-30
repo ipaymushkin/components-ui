@@ -19,14 +19,22 @@ export default {
             control: {
                 type: "text"
             }
+        },
+        disabled: {
+            control: {
+                type: 'boolean'
+            }
         }
     },
 } as Meta;
 
 const Template: Story<IInputProps> = (props) => <InputComponent {...props}/>
 
-export const Input = Template.bind({});
+export const Input = Template.bind({
+    type: "text"
+});
 Input.args = {
     value: "hello",
-    type: "text"
+    type: "text",
+    disabled: false,
 };

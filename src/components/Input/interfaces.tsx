@@ -4,6 +4,7 @@ export interface IInputProps {
     value: string | number,
     onChange(value: string | number): void,
     type?: "text" | "password" | "number",
+    disabled?: boolean,
 }
 
 export interface IInputChildren {
@@ -11,5 +12,6 @@ export interface IInputChildren {
         value: string | number,
         onChange(value: string | number): void,
         type?: "text" | "password" | "number",
+        disabled?: boolean,
     }): React.ReactElement,
 }
