@@ -20,18 +20,6 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "plugin:prettier/recommended"
-    ]
-  },
-  "prettier": {
-    "endOfLine": "auto",
-    "printWidth": 90,
-    "bracketSpacing": false,
-    "trailingComma": "es5"
-  },
   "homepage": "https://github.com/ipaymushkin/components-ui",
   "browserslist": {
     "production": [

@@ -1,6 +1,6 @@
 import {ChangeEvent} from "react";
 
 export interface IProps  {
-    onChange: (event: ChangeEvent<HTMLInputElement>) => ChangeEvent<HTMLInputElement>,
+    onChange: (event: ChangeEvent<HTMLInputElement>) => string|number,
     value: string|number,
 }

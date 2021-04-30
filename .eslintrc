@@ -1,6 +1,16 @@
 {
-  "plugins": ["prettier", "@typescript-eslint"],
-  "extends": ["airbnb-typescript", "react-app", "prettier"],
+  "plugins": [
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "airbnb-typescript",
+    "react-app",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
@@ -13,7 +23,10 @@
     }
   },
   "rules": {
-    "object-curly-spacing": ["warn", "always"],
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
     "no-unused-vars": [
       "warn",
       {
@@ -64,12 +77,15 @@
     "react/jsx-one-expression-per-line": "off",
     "react/jsx-wrap-multilines": "off",
     "react/destructuring-assignment": "off",
-    "@typescript-eslint/comma-dangle": ["error", {
-      "arrays": "only-multiline",
-      "objects": "only-multiline",
-      "imports": "only-multiline",
-      "exports": "only-multiline",
-      "functions": "never"
-    }]
+    "@typescript-eslint/comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+      }
+    ]
   }
 }

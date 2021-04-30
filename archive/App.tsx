@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Input, Textarea } from "./components/Input";
 import Form from "./components/Form";
 import { useForm } from './hooks/useForm';
-import InputView from "./components/Input/view/InputView";
+// import InputView from "./components/Input/view/InputView";
 import PlainInput from "./components/PlainInput";
 import CustomInputView from './components/PlainInput/CustomInputView';
 import InputItem from './components/InputItem';
@@ -30,8 +30,8 @@ const App = () => {
     return (
         <div>
             <Form onChange={handleChange} onSubmit={() => onSubmit(handleSubmit)} values={values}>
-                <Input name="name" label="Name" />
-                <Input name="age" label="Age" type="number" />
+                {/*<Input name="name" label="Name" />*/}
+                {/*<Input name="age" label="Age" type="number" />*/}
                 <Textarea name="comment" label="Comment" />
                 <button type="submit">submit</button>
             </Form>
@@ -44,7 +44,7 @@ const App = () => {
 
             <InputItem renderItem={({ value, onChangeCallback, label }) => <div>{value}</div>} value="dasddasd" onChange={() => {}} label="vvv" />
 
-            <InputView name="1" onChange={localChange} value={localValue.value} />
+            {/*<InputView name="1" onChange={localChange} value={localValue.value} />*/}
         </div>
     );
 };
