@@ -1,7 +1,6 @@
-
 export interface IInputProps {
     onChange?(value: {}): void,
-    value?: string,
+    value?: string|number,
     error?: string,
     name: string,
     label?: string,
